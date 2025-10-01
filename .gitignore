@@ -1,0 +1,23 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+package-lock.json
+
+# env / secrets
+.env
+.env.local
+*.env.*
+
+# outputs
+out/
+*.sql
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# DB Original Data
+data/*

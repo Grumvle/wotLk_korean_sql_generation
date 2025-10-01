@@ -1,0 +1,15 @@
+{
+  "name": "acore-locale-builder",
+  "version": "1.0.0",
+  "description": "Build SQL upserts for AzerothCore *_locale tables from scraped Korean HTML",
+  "type": "module",
+  "scripts": {
+    "build:quest": "node build-locale.js quest",
+    "build:npc": "node build-locale.js npc",
+    "build:item": "node build-locale.js item"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
