@@ -49,9 +49,7 @@ export function buildQuestUpsertSQL(id, locale, f) {
     'VerifiedBuild = newrow.VerifiedBuild'
   ];
 
-  return 'INSERT INTO `quest_template_locale` (' +
+  return 'INSERT IGNORE INTO `quest_template_locale` (' +
     cols.map(c => '`' + c + '`').join(', ') +
-    ') VALUES (' + vals.join(', ') +
-    ') AS newrow ON DUPLICATE KEY UPDATE ' +
-    updates.join(', ') + ';';
+    ') VALUES (' + vals.join(', ') + ');';
 }

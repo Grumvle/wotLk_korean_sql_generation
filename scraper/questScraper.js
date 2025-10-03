@@ -40,10 +40,9 @@ export async function scrapeKoreanById(id, origRow) {
     const Title         = stripHtml(between(html, '<h1 class="heading-size-1">', '</h1>'));
     const Details       = stripHtml(between(html, '<h2 class="heading-size-3">서술</h2>', '<h2 class="heading-size-3">'));
     const Objectives    = stripHtml(between(html, '</h1>', '<table class="icon-list">'));
-    //   const EndText       = stripHtml(between(html, '<div id="lknlksndgg-progress" style="display: none">', '</div>'));
-    const EndText       = '';
-    const CompletedText = stripHtml(between(html, '<div id="lknlksndgg-completion" style="display: none">', '</div>'));
-    console.log(CompletedText);
+    const EndText       = null;
+    const CompletedText = null;
+    const RewardText = stripHtml(between(html, '<div id="lknlksndgg-completion" style="display: none">', '</div>'));
     const objList = parseObjectivesFromIconList(html);
 
     return {
@@ -56,8 +55,8 @@ export async function scrapeKoreanById(id, origRow) {
         ObjectiveText2: objList[1] || null,
         ObjectiveText3: objList[2] || null,
         ObjectiveText4: objList[3] || null,
-        // VerifiedBuild: (origRow && origRow.VerifiedBuild) || 0
-        VerifiedBuild: 18019
+        VerifiedBuild: 18019,
+        RewardText: RewardText || null
     };
 }
 

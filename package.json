@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build:quest": "node build-locale.js quest",
-    "build:npc": "node build-locale.js npc",
-    "build:item": "node build-locale.js item"
+    "build:quest-offer-reward": "node build-locale.js quest-offer-reward",
+    "build:quest:both": "node build-locale.js quest-both"
   },
   "license": "MIT",
   "dependencies": {

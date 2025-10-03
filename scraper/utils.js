@@ -32,5 +32,6 @@ export function stripHtml(s) {
     .replace(/&lt;/gi, '<')
     .replace(/&gt;/gi, '>')
     .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+    .replace(/이 퀘스트는 더 이상 게임 내에서 받을 수 없습니다./g, '')
     .trim();
 }
