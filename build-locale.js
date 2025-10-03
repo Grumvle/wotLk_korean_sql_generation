@@ -70,9 +70,9 @@ for (const row of json.rows) {
   } else if (kind === 'quest-both') {
     // 1) quest_template_locale
     append(outQuest, buildQuestUpsertSQL(id, LOCALE, f));
-    // 2) quest_offer_reward_locale (RewardText ← CompletedText)
+    // 2) quest_offer_reward_locale (RewardText ← RewardText)
     append(outOffer, buildQuestOfferRewardUpsertSQL(id, LOCALE, {
-      CompletedText: f.CompletedText ?? null,
+      RewardText: f.RewardText ?? null,
       VerifiedBuild: f.VerifiedBuild ?? (row.VerifiedBuild || 0),
     }));
   }
